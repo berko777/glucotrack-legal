@@ -1,19 +1,176 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Privacy Policy - GlucoTrack</title>
-</head>
-<body style="font-family: Arial; padding: 40px; max-width: 800px; margin: auto;">
-  <h1>Privacy Policy</h1>
+import 'package:flutter/material.dart';
 
-  <p>GlucoTrack stores user health data locally on the device.</p>
+class PrivacyPolicyScreen extends StatelessWidget {
+  const PrivacyPolicyScreen({super.key});
 
-  <p>No personal health data is uploaded to external servers.</p>
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Gizlilik Politikası')),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              _BodyText('Son Güncelleme: 2026'),
+              SizedBox(height: 16),
+              _BodyText(
+                'Bu gizlilik politikası, bu uygulamanın kullanıcı verilerini nasıl topladığını, kullandığını ve koruduğunu açıklamaktadır.',
+              ),
+              SizedBox(height: 24),
+              _SectionTitle('1. Toplanan Veriler'),
+              SizedBox(height: 8),
+              _BodyText(
+                'Bu uygulama, kullanıcı deneyimini sağlamak amacıyla aşağıdaki verileri yalnızca cihaz üzerinde saklayabilir:',
+              ),
+              SizedBox(height: 12),
+              _BulletText('Kan şekeri ölçüm verileri'),
+              _BulletText('Su tüketimi bilgileri'),
+              _BulletText('Adım sayısı verileri'),
+              _BulletText(
+                'Kullanıcı tarafından girilen notlar ve sağlık verileri',
+              ),
+              SizedBox(height: 12),
+              _BodyText('Bu veriler:'),
+              SizedBox(height: 8),
+              _BulletText('Sunucuya gönderilmez'),
+              _BulletText('Üçüncü taraflarla paylaşılmaz'),
+              _BulletText('Geliştirici tarafından erişilemez'),
+              SizedBox(height: 24),
+              _SectionTitle('2. Veri Saklama'),
+              SizedBox(height: 8),
+              _BodyText('Tüm kullanıcı verileri:'),
+              SizedBox(height: 8),
+              _BulletText('Yalnızca kullanıcının cihazında saklanır'),
+              _BulletText(
+                'Uygulama kaldırıldığında kalıcı olarak silinir',
+              ),
+              SizedBox(height: 24),
+              _SectionTitle('3. Üçüncü Taraf Hizmetler'),
+              SizedBox(height: 8),
+              _BodyText('Bu uygulama:'),
+              SizedBox(height: 8),
+              _BulletText(
+                'Herhangi bir üçüncü taraf analiz (analytics) servisi kullanmaz',
+              ),
+              _BulletText('Reklam ağı kullanmaz'),
+              _BulletText('Harici veri toplama sistemi içermez'),
+              SizedBox(height: 24),
+              _SectionTitle('4. Veri Güvenliği'),
+              SizedBox(height: 8),
+              _BodyText('Kullanıcı verilerinin güvenliği önemlidir.'),
+              SizedBox(height: 8),
+              _BodyText(
+                'Veriler, cihaz üzerinde güvenli bir şekilde saklanır ve dış erişime kapalıdır.',
+              ),
+              SizedBox(height: 12),
+              _BodyText('Ancak:'),
+              SizedBox(height: 8),
+              _BulletText('Hiçbir dijital sistem %100 güvenli değildir'),
+              _BulletText(
+                'Kullanıcı, kendi cihaz güvenliğinden sorumludur',
+              ),
+              SizedBox(height: 24),
+              _SectionTitle('5. Sağlık Verileri ve Sorumluluk Reddi'),
+              SizedBox(height: 8),
+              _BodyText('Bu uygulama:'),
+              SizedBox(height: 8),
+              _BulletText(
+                'Sağlık verilerini takip etmek amacıyla tasarlanmıştır',
+              ),
+              _BulletText(
+                'Tıbbi tavsiye, teşhis veya tedavi amacı taşımaz',
+              ),
+              SizedBox(height: 12),
+              _BodyText('Kullanıcılar:'),
+              SizedBox(height: 8),
+              _BulletText(
+                'Sağlık durumlarıyla ilgili kararları bir sağlık uzmanına danışarak vermelidir',
+              ),
+              SizedBox(height: 24),
+              _SectionTitle('6. Kullanıcı Hakları'),
+              SizedBox(height: 8),
+              _BodyText('Kullanıcılar:'),
+              SizedBox(height: 8),
+              _BulletText('Tüm verilerini uygulama üzerinden görüntüleyebilir'),
+              _BulletText('Verilerini silebilir'),
+              _BulletText(
+                'Uygulamayı kaldırarak tüm verilerini kalıcı olarak yok edebilir',
+              ),
+              SizedBox(height: 24),
+              _SectionTitle('7. Çocukların Gizliliği'),
+              SizedBox(height: 8),
+              _BodyText(
+                'Bu uygulama, 13 yaş altındaki çocuklara özel olarak tasarlanmamıştır ve bilerek veri toplamaz.',
+              ),
+              SizedBox(height: 24),
+              _SectionTitle('8. Değişiklikler'),
+              SizedBox(height: 8),
+              _BodyText(
+                'Bu gizlilik politikası zaman zaman güncellenebilir.',
+              ),
+              SizedBox(height: 8),
+              _BodyText(
+                'Güncellemeler uygulama üzerinden yayınlandığı anda geçerli olur.',
+              ),
+              SizedBox(height: 24),
+              _SectionTitle('9. İletişim'),
+              SizedBox(height: 8),
+              _BodyText('Herhangi bir soru veya talep için:'),
+              SizedBox(height: 8),
+              _BodyText('E-posta: glucotrack.support@gmail.com'),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
 
-  <p>The app may use Apple services for subscriptions and notifications.</p>
+class _SectionTitle extends StatelessWidget {
+  final String text;
 
-  <h2>Contact</h2>
+  const _SectionTitle(this.text);
 
-  <p>Email: glucotrack.support@gmail.com</p>
-</body>
-</html>
+  @override
+  Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
+    final colorScheme = Theme.of(context).colorScheme;
+    return Text(
+      text,
+      style: textTheme.titleMedium?.copyWith(
+        fontWeight: FontWeight.w600,
+        color: colorScheme.onSurface,
+      ),
+    );
+  }
+}
+
+class _BodyText extends StatelessWidget {
+  final String text;
+
+  const _BodyText(this.text);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: Theme.of(context).textTheme.bodyMedium?.copyWith(height: 1.5),
+    );
+  }
+}
+
+class _BulletText extends StatelessWidget {
+  final String text;
+
+  const _BulletText(this.text);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      '- $text',
+      style: Theme.of(context).textTheme.bodyMedium?.copyWith(height: 1.5),
+    );
+  }
+}
